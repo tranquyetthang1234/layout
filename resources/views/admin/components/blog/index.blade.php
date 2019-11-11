@@ -27,6 +27,7 @@
                         <thead>
                             <tr>
                                 <th>STT</th>
+                                <th>Danh mục</th>
                                 <th>Tiêu đề</th>
                                 <th>Mô tả</th>
                                 <th>Trạng thái</th>
@@ -39,6 +40,7 @@
                             @foreach ($posts as $key => $post)
                                 <tr>
                                     <td>{{++$key}}</td>
+                                    <td>Thời trạng</td>
                                     <td>{{$post->title}}</td>
                                     <td>{{$post->description}}</td>
                                     <td class="text-center">

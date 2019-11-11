@@ -92,6 +92,7 @@ function createCategory()
         success(data) {
            if(data.status) {
                toast(data.message, 'success');
+               window.location.reload();
            }else {
                toast(data.message, 'error');
            }

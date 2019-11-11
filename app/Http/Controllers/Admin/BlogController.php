@@ -5,18 +5,25 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
+use App\Models\CategoryPost;
+use App\Models\Category;
+use App\User;
+
 class BlogController extends Controller
 {
    public function index(Post $post)
     {
-        $posts = Post::where('active',1)->get();
-        $string = "phan";
-        $count  = 0 ;
-        $z = 0;
-        while (@$string[$count]) {
-            $count++ ;
-        }
-        dd($posts->user());
+        $posts = Post::with('categoryPost')->orderBy('updated_at', 'asc')->get();
+        $category_blog = CategoryPost::where('active', 1)->get();
+       // $categories = User::with('categories')->orderBy('updated_at', 'asc')->get();
+        dd($posts->toArray());
+        // $string = "phan";
+        // $count  = 0 ;
+        // $z = 0;
+        // while (@$string[$count]) {
+        //     $count++ ;
+        // }
+        // dd($posts->user());
         return view('admin.components.blog.index',compact('posts'));
     }
 

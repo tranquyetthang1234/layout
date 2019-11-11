@@ -44,7 +44,7 @@ class CategoryController extends Controller
             $category->name        = $request->name;
             $category->description = $request->description;
             $category->user_id     = 1;
-
+           
             if($request->hasFile('file_data')) {
                 $imageName = uploadImage($request->file_data,'images/category',[],false);
                 if($imageName && $imageName['code']){
@@ -57,6 +57,7 @@ class CategoryController extends Controller
                 }
                 $category->icon_url   =  $fileNameUpload;
             }
+          
             $category->save();
             $categories = Category::where('active',1)->get();
 

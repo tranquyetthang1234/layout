@@ -33,7 +33,7 @@ Route::group(['prefix' => 'admin','namespace' =>'Admin'], function () {
         Route::get('show','BlogController@show')->name('admin.blog.show');
         Route::post('update','BlogController@update')->name('admin.blog.update');
         Route::post('delete','BlogController@destroy')->name('admin.blog.destroy');
-         Route::post('active', 'BlogController@changeActive')->name('admin.blog.active');
+        Route::post('active', 'BlogController@changeActive')->name('admin.blog.active');
    });
 
     Route::group(['prefix' => 'catblog'], function () {
