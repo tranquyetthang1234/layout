@@ -396,11 +396,10 @@ input[type=number]::-webkit-outer-spin-button {
                                         <input value="347" type="file" id="img-category" class="input-img" multiple="" accept="image/*" onchange="handleFiles(this.files,this)">
                                         <label class="lb-file" for="img-category"></label>
                                     </div>
-                                <div id="gallery" class="gallery" data_ids="347">  <img class="lazy" data-original="../assets/upload_lead/e0e25f24a6fcc5d060db413bbbf4a9eb.jpg" alt="avatar" onerror="this.src='/assets/uploads/default-v.png'" src="../assets/upload_lead/e0e25f24a6fcc5d060db413bbbf4a9eb.jpg" style="">
+                                <div id="gallery" class="gallery" data_ids="347">  <img class="lazy" data-original="../assets/upload_lead/e0e25f24a6fcc5d060db413bbbf4a9eb.jpg" alt="avatar" onerror="this.src=''" src="../assets/upload_lead/e0e25f24a6fcc5d060db413bbbf4a9eb.jpg" style="">
                                 </div>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label style="font-size: 15px;font-weight: 700;">Thuộc danh mục</label>
                             <select name="category_id" id="input" class="form-control  " required="required">
